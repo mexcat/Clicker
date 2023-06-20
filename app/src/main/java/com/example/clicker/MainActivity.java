@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initListeners();
+    }
+
+    private void initListeners(){
         Button btnToast = findViewById(R.id.btn_toast);
         Button btnCount = findViewById(R.id.btn_count);
 
@@ -31,14 +35,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Integer value = 0;
                 if(!tvCounter.getText().toString().isEmpty()){
-                   value  = Integer.parseInt(tvCounter.getText().toString());
+                    value  = Integer.parseInt(tvCounter.getText().toString());
                 }
-
                 Integer quantity = value + 1;
                 tvCounter.setText(quantity.toString());
             }
-
         });
-
     }
+
 }
