@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
         btnCount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer value = 0;
+                int value = 0;
                 if(!tvCounter.getText().toString().isEmpty()){
                     value  = Integer.parseInt(tvCounter.getText().toString());
                 }
-                Integer quantity = value + 1;
-                tvCounter.setText(quantity.toString());
+                int quantity = value + 1;
+                tvCounter.setText(String.valueOf(quantity));
             }
         });
     }
